@@ -8,7 +8,7 @@ var fuzzyMatch = (function(){
    * @return {string} Regex-compatible escaped string
    */
   function escapeRegex(term){
-    return term.replace(/\[\]\{\}\(\)\^\$\.\*\+\|/g, function(a){
+    return term.replace(/[\[\]\{\}\(\)\^\$\.\*\+\|]/g, function(a){
       return '\\' + a;
     });
   }
