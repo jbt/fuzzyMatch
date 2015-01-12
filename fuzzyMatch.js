@@ -90,7 +90,7 @@ var fuzzyMatch = (function(){
    */
   var stripAccents = (function(accented, unaccented){
     var matchRegex = new RegExp('[' + accented + ']', 'g'),
-        translationTable = {}, i;
+        translationTable = {}, i,
         lookup = function(chr){
           return translationTable[chr] || chr;
         };
