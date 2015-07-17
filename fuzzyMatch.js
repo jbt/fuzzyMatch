@@ -21,7 +21,7 @@ var fuzzyMatch = (function(){
     });
   }
 
-  // A few heper constants; they don't really do much, but they
+  // A few helper constants; they don't really do much, but they
   // indicate the corresponding rows and columns in the matrix below.
   var UPPER = 0, LOWER = 1, NUMBER = 2, COMMON_DELIMS = 3, OTHER = 4;
 
