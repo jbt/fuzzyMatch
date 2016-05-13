@@ -1,12 +1,26 @@
 /*
- * fuzzyMatch String matching algorithm
- * https://github.com/jbt/fuzzyMatch
- *
- * Author: James Taylor <jt@gosquared.com>
- * License: MIT
- */
+* fuzzyMatch String matching algorithm
+* https://github.com/jbt/fuzzyMatch
+*
+* Author: James Taylor <jt@gosquared.com>
+* License: MIT
+*/
 
-var fuzzyMatch = (function(){
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory();
+    } else {
+        // Browser globals (root is window)
+        root.fuzzzzz = factory();
+  }
+}(this, function () {
+
   /**
    * ## escapeRegex
    *
@@ -252,4 +266,4 @@ var fuzzyMatch = (function(){
   }
 
   return fuzzyScore;
-})();
+}));
